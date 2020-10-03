@@ -1,0 +1,15 @@
+a:link {
+  color: var(--p-high);
+}
+a:hover {
+  color: #2A30E7;
+}
+a:active {
+  color: #2ACAE7;
+}
+a:visited {
+  color: grey;
+}
+a {
+  text-decoration: none;
+}
