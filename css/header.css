@@ -7,7 +7,7 @@ header {
   width: 100%;
   color: var(--white);
   background: var(--p-color);
-  box-shadow: 0 2px 10px 3px rgb(21, 21, 21);
+  box-shadow: 0 2px 10px 3px rgba(21, 21, 21, 0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -113,9 +113,7 @@ header::after {
   animation: 1.2s span3 0.5s forwards;
 }
 
-.ham-norm span {
-  
-}
+
 .ham-norm span:nth-child(1) {
     width: 110%;
     transform: rotate(-30deg);
@@ -136,4 +134,16 @@ header::after {
 
 #logo {
   font-family: var(--head-font);
+}
+
+@media screen and (min-width: 600px){
+  header {
+    height: 4vh;
+    
+  }
+  .logo {
+    width: 25%;
+    
+  }
+  
 }

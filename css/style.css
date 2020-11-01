@@ -113,20 +113,18 @@ flex-direction: column;
 
 #intro .pic {
   width: 300px;
-  height: 200px;
+  margin-bottom: 10px;
 }
 
-#intro h1 {
-  
+#intro #intro-text {
+  display: flex;
+  flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 60%;
 }
 
-#intro h3 {
-  
-}
 
-#intro h5 {
-  
-}
 
 #what-sect {
   text-align: left;
@@ -192,7 +190,7 @@ flex-direction: column;
 
 
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
+
 .pay-btns {
   width: 80%;
 display: flex;
@@ -277,11 +275,15 @@ iframe:nth-child(1){
   margin: 0;
   padding: 0;
 }
-
-@media screen and (min-width: 450px){
+/* Media queries - Responsive timeline on screens more than 450px wide */
+@media screen and (min-width: 700px){
+/* If you're wondering y this header selectordoesnt work, 
+  its simple. Its because the header and menu are already defined  
+  in the menu.css */
   header {
-    height: 5vh;
-    padding-right: 40px;
+    height: 20vh;
+    padding-right: 20px;
+
   } 
  header::after {
    left: 99%;
@@ -294,6 +296,63 @@ iframe:nth-child(1){
 .click:hover span {
   opacity: 0.4;
 }
+
+  #intro {
+  height: 90vh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 10px;
+    margin: 0;
+}
+
+#intro .pic {
+  width: 30%;
+  margin-left: 30px;
+  min-width: 40%;
+  margin-right: 30px;
+}
+
+#intro #intro-text {
+  padding: 0 10% 0 10%;
+}
+
+#intro #intro-text h1, #intro #intro-text h3, #intro #intro-text h5 {
+  margin-bottom: 20px;
+}
+
+#intro #intro-text h1 {
+  font-size: 1.8em;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+#intro #intro-text button {
+  margin-bottom: 0;
+}
+
+
+#what-sect, #why-sect, #how-sect, #where-sect, #timeline-sect, #team-sect {
+  text-align: center;
+  line-height: 30px;
+  padding: 0 10%;
+}
+
+#how-sect .pic {
+  width: 60%;
+  min-width: 200px;
+  max-width: 600px;
+}
+
+#where-sect .pic {
+  margin-top: 50px;
+  width: 60%;
+  min-width: 200px;
+  max-width: 600px;
+}
+
 
 footer {
   height: 5vh;

@@ -21,6 +21,7 @@
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: -webkit-radial-gradient(white, black);
   color: var(--c, var(--color));
   background: var(--b, var(--background));
   transition: color .2s linear var(--c-d, .2s), background .3s linear var(--b-d, .2s);
@@ -52,6 +53,7 @@
   z-index: 1;
   position: relative;
   display: flex;
+  
 }
 
 .button div span {
