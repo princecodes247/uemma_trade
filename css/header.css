@@ -1,0 +1,139 @@
+header {
+  position: sticky;
+  left: 0;
+  top: 0;
+  height: 10vh;
+  min-height: 50px;
+  width: 100%;
+  color: var(--white);
+  background: var(--p-color);
+  box-shadow: 0 2px 10px 3px rgb(21, 21, 21);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 30px;
+  z-index: 2;
+}
+/*
+header::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 98%;
+  background: var(--p-high);
+  width: 80vw;
+  height: 40vh;
+
+  box-shadow: 0 0 30px transparent;
+  transform: rotate(0deg);
+  z-index: 0;
+  transition: 0.6s ease;
+  pointer-events: none;
+}
+
+.cheader::after {
+  left: 60%;
+  box-shadow: 0 0 30px var(--s-color);
+  transform: rotate(20deg);
+  filter: blur(1px) opacity(0.9);
+}
+*/
+
+.logo {
+  padding: 0;
+  position: relative;
+  width: 40%;
+  overflow: visible;
+  z-index: 2;
+}
+
+.logo::before {
+  position: absolute;
+  top: 4px;
+  left: -4px;
+  content: ';';
+  color: var(--p-color);
+  background: var(--p-color);
+  height: 10px;
+  width: 3px;
+  margin-right: 4px;
+}
+
+.ham {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 25px;
+  z-index: 10;
+  border: none;
+  
+}
+
+.ham span {
+  display: block;
+  height: 2px;
+  background: white;
+  border-radius: 4px;
+  transition: 0.6s ease;
+}
+
+.ham span:nth-child(1) {
+  position: relative;
+  width: 100%;
+  transform-origin: right;
+  top: calc(var(--ham-space)*-1);
+
+}
+
+.ham span:nth-child(2) {
+  position: relative;
+  width: 50%;
+}
+
+.ham span:nth-child(3) {
+  transform-origin: right;
+  position: relative;
+  width: 70%;
+  top: calc(var(--ham-space)*1);
+}
+
+
+.click span:nth-child(1) {
+/*  background: var(--p-color);*/
+  animation: 1.2s span1 0.5s both;
+}
+
+.click span:nth-child(2) {
+/*  background: var(--p-color);*/
+  animation: 1.0s span2 0.3s forwards;
+}
+
+.click span:nth-child(3) {
+/*  background: var(--p-color);*/
+  animation: 1.2s span3 0.5s forwards;
+}
+
+.ham-norm span {
+  
+}
+.ham-norm span:nth-child(1) {
+    width: 110%;
+    transform: rotate(-30deg);
+  animation: 1.2s rspan1 0.5s both;
+}
+
+.ham-norm span:nth-child(2) {
+    transform: translateX(-480%);
+    width: 10%;
+  animation: 1.0s rspan2 0.3s forwards;
+}
+
+.ham-norm span:nth-child(3) {
+  width: 110%;
+  transform: rotate(30deg);
+  animation: 1.2s rspan3 0.5s forwards;
+}
+
+#logo {
+  font-family: var(--head-font);
+}

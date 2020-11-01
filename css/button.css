@@ -1,0 +1,139 @@
+
+.button {
+  --color: #fff;
+  --color-hover: #4B5064;
+  --background: #2B3044;
+  --background-hover: var(--background);
+  --hover-back: #6D58FF;
+  --hover-front: var(--p-high);
+  padding: 8px 28px;
+  border-radius: 20px;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .02em;
+
+  border: none;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  color: var(--c, var(--color));
+  background: var(--b, var(--background));
+  transition: color .2s linear var(--c-d, .2s), background .3s linear var(--b-d, .2s);
+}
+
+
+
+.button::before,
+.button::after {
+  content: '';
+  position: absolute;
+  background: var(--pb, var(--hover-back));
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200%;
+  border-radius: var(--br, 40%);
+  transform: translateY(var(--y, 50%));
+  transition: transform var(--d, .34s) ease-in var(--d-d, 0s), border-radius .5s ease var(--br-d, .08s);
+
+}
+
+.button::after {
+  --pb: var(--hover-front);
+  --d: .42s;
+}
+
+.button div {
+  z-index: 1;
+  position: relative;
+  display: flex;
+}
+
+.button div span {
+  display: block;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  animation: var(--name, none) .7s linear forwards .18s;
+}
+
+.button-alt {
+  --color-hover: #4B5064;
+  --background:  #2B3044;
+  --hover-back: #DFBD30;
+  --hover-front: #DF3030;
+}
+
+.button-simple {
+  --background: var(--p-high);
+  --background-hover: #1749DB;
+    --hover-back: transparent;
+    --hover-front: transparent;
+    
+}
+
+.button-in div span {
+  --name: move;
+}
+
+.button-in div span  {
+  --c: var(--color-hover);
+  --b: var(--background-hover);
+  
+}
+
+.button-in::before, .button-in::after {
+  --y: 0;
+  --br: 5%;
+}
+
+.button-in::after {
+  --br: 10%;
+  --d-d: .02s;
+}
+
+.button-out {
+  --name: move-out;
+}
+
+.button-in::before {
+  --d-d: .06s;
+}
+
+
+
+@keyframes move {
+
+  30%,
+  36% {
+    transform: translateY(calc(-6px * var(--move))) translateZ(0) rotate(calc(-13deg * var(--rotate) * var(--part)));
+  }
+
+  50% {
+    transform: translateY(calc(3px * var(--move))) translateZ(0) rotate(calc(6deg * var(--rotate) * var(--part)));
+  }
+
+  70% {
+    transform: translateY(calc(-2px * var(--move))) translateZ(0) rotate(calc(-3deg * var(--rotate) * var(--part)));
+  }
+}
+
+@keyframes move-out {
+
+  30%,
+  36% {
+    transform: translateY(calc(6px * var(--move))) translateZ(0) rotate(calc(13deg * var(--rotate) * var(--part)));
+  }
+
+  50% {
+    transform: translateY(calc(-3px * var(--move))) translateZ(0) rotate(calc(-6deg * var(--rotate) * var(--part)));
+  }
+
+  70% {
+    transform: translateY(calc(2px * var(--move))) translateZ(0) rotate(calc(3deg * var(--rotate) * var(--part)));
+  }
+}

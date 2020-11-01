@@ -1,0 +1,166 @@
+#menu {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  right: -70%;
+  height: 100vh;
+  width: 70vw;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--p-color);
+  box-shadow: -5px 9px 10px rgba(21, 21, 21, 0.6);
+  z-index: 5;
+	transition: 0.4s ease;
+}
+
+#menu .user-info {
+  width: 100%;
+  background: var(--p-high);
+  flex: 40;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 8;
+}
+
+#menu .user-info .userpic-ctr {
+  padding-top: 50px;
+  padding-left: 20px;
+  height: 100%;
+  flex: 30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu .user-info .userpic-ctr .circle-grad {
+  background: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s all;
+}
+
+#menu .user-info .userpic-ctr .circle-grad img {
+  background: black;
+  height: 97px;
+  width: 97px;
+  border-radius: 50%;
+}
+
+#menu .user-info .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  flex: 70;
+}
+
+#menu #list {
+  flex: 50;
+  width: 100%;
+  padding-left: 0px;
+  padding-top: 40px;
+  line-height: 50px;
+  font-size: 14px;
+  flex-shrink: 4;
+}
+
+#menu .options {
+  text-decoration: none;
+}
+#menu .options div {
+  font-size: 1.2em;
+  color: white;
+  text-transform: capitalize;
+  
+  
+}
+
+/* Don't mind the name, this is the div surrounding the logout button*/
+#menu .cover {
+display: flex;
+flex: 10;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 30px;
+    flex-shrink: 1
+}
+
+#menu .cover * {
+  text-decoration: none;
+}
+
+.noscroll {
+
+  overflow-y: hidden;
+
+}
+
+.slideIn {
+  animation: 1s slide ease both;
+}
+
+
+.slideOut{
+  transition: transform 1s ;
+  transform: translateX(100%)
+}
+
+@media screen and (min-width: 450px) {
+  
+  #menu {
+    width: 30vw;
+  }
+  
+}
+@media screen and (max-width: 700px) and (max-height: 500px) {
+  #menu .user-info {
+    display: none;
+  }
+  
+
+
+}
+
+
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+
+  16% {
+    transform: translateX(-132.27%);
+  }
+
+  28% {
+    transform: translateX(-86.88%);
+  }
+
+  44% {
+    transform: translateX(-104.63%);
+  }
+
+  59% {
+    transform: translateX(-98.36%);
+  }
+
+  73% {
+    transform: translateX(-100.58%);
+  }
+
+  88% {
+    transform: translateX(-99.8%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+
+}

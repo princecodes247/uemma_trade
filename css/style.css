@@ -1,0 +1,421 @@
+/* GENERAL STUFF */
+@font-face {
+  font-family: Montserrat;
+  src: url("../assets/fonts/Montserrat-Regular.ttf");
+}
+
+
+@font-face {
+  font-family: Poppins;
+  src: url("../assets/fonts/Poppins-Regular.ttf");
+}
+
+:root {
+
+  --head-font: Poppins;
+  --main-font: Montserrat;
+  --p-high: hsl(208, 92%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(225, 100%, 98%);
+  --l-gray-blue: hsl(227, 47%, 96%);
+  --d-gray-blue: hsl(228, 12%, 44%);
+  --white: #fff;
+  --ham-space: 5px;
+  --vd-gray-blue: hsl(230, 17%, 14%);
+  --lvd-gray-blue: hsl(232, 19%, 15%);
+  --d-ds-blue: hsl(228, 28%, 20%);
+  --ds-blue: hsl(228, 34%, 66%);
+}
+
+.light {
+  --bg: var(--white);
+  --p-color: var(--pale-blue);
+  --s-color: var(--l-gray-blue);
+  --alt-text-color: var(--d-gray-blue);
+  --text-color: var(--vd-gray-blue);
+  --menu: grey;
+}
+
+.dark {
+  --bg: var(--vd-gray-blue);
+  --p-color: var(--lvd-gray-blue);
+  --s-color: var(--d-ds-blue);
+  --alt-text-color: var(--ds-blue);
+  --text-color: var(--white);
+  --menu: white;
+  
+  /*TEST*/
+ 
+}
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+body {
+  font: var(--main-font);
+  text-align: center;
+  font-size: 15pt;
+  background: var(--bg);
+  color: var(--text-color);
+  transition: background 500ms ease, color 300ms ease;
+  width: 100vw;
+  
+}
+
+.body-cover {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+#dashboard {
+  overflow: hidden;
+}
+
+.main {
+  position: relative;
+  top: 0;
+  right: 0;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  scroll-snap-type: y mandatory;
+}
+
+.lpart {
+  margin: 100px 0;
+  padding: 0 30px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always
+}
+
+#intro {
+  background: #0D47A1;
+  height: 90vh;
+  min-height: 600px;
+display: flex;
+flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 10px;
+    margin: 0;
+}
+
+#intro .pic {
+  width: 300px;
+  height: 200px;
+}
+
+#intro h1 {
+  
+}
+
+#intro h3 {
+  
+}
+
+#intro h5 {
+  
+}
+
+#what-sect {
+  text-align: left;
+  padding: 0 20px;
+}
+
+#why-sect {
+  padding: 40px 0;
+  text-align: center;
+  margin-bottom: 10px;
+
+}
+
+#why-sect .pic {
+  height: 150px;
+}
+#why-sect .parts {
+  padding: 40px 40px;
+}
+
+#why-sect .parts h4 {
+  margin-bottom: 15px;
+}
+
+#why-sect .button {
+  margin-top: 20px
+}
+
+#how-sect {
+  margin-top: 20px;
+}
+#how-sect .pic {
+  
+   width: 90vw;
+}
+
+#how-sect * {
+  margin-bottom: 20px;
+}
+
+#where-sect {
+  margin: 0;
+  padding: 0;
+}
+#where-sect * {
+  margin-bottom: 20px;
+}
+#where-sect .pic {
+   width: 90vw;
+   
+}
+#team-sect * {
+  margin-bottom: 20px;
+}
+
+#contact-sect {
+  text-align: left;
+}
+
+#contact-sect * {
+  margin-bottom: 20px;
+}
+
+
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+.pay-btns {
+  width: 80%;
+display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+  height: 30vh;
+  margin-top: 20px;
+  width: 85%;
+  display: flex;
+  flex-direction: column ;
+  justify-content: space-between;
+  padding: 20px 10px;
+  align-items: center;
+  border-top: 2px solid var(--p-high);
+  background: var(--s-color);
+  border-radius: 4px;
+}
+
+.cov {
+display: flex;
+flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+  padding: 10px 40px;
+  scroll-padding: 0;
+  scroll-margin: 0;
+  background-color: inherit;
+  min-height: 400px;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: visible;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+    padding: 20px 20px;
+    background-color: var(--p-high);
+    position: relative;
+    border-radius: 10px;
+    min-width: 130%;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    scroll-margin: 0;
+    margin-right: 20px;
+    overflow: visible;
+    
+}
+
+.carousel-item:nth-child(1) {
+  margin-left:-40px;
+}
+.foter {
+
+  max-height: 10vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.s-icon {
+  fill: var(--text-color);
+  margin-left: 10px;
+}
+
+iframe {
+  width: 90vw;
+  height: calc(90vw*(9/7));
+  background: red;
+  margin: 20px 0;
+}
+iframe:nth-child(1){
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 450px){
+  header {
+    height: 5vh;
+    padding-right: 40px;
+  } 
+ header::after {
+   left: 99%;
+ }
+  
+.ham-norm:hover span {
+  opacity: 0.4;
+}
+
+.click:hover span {
+  opacity: 0.4;
+}
+
+footer {
+  height: 5vh;
+  }
+
+
+}
+
+
+
+@keyframes span1 {
+  0% {
+    width: 100%;
+  }
+  30% {
+    width: 10%;
+  }
+  32% {
+    transform: rotate(0deg)
+  }
+  35%{
+    transform: rotate(-30deg);
+  }
+  100% {
+  width: 110%;
+  transform: rotate(-30deg);
+  }
+}
+@keyframes span2 {
+    0% {
+    width: 50%;
+  }
+  30% {
+    width: 10%;
+  }
+
+  45%{
+    transform: translateX(0%);
+  }
+  100%{
+
+  
+  transform: translateX(-480%);
+  width: 10%;
+  }
+}
+@keyframes span3 {
+    0% {
+    width: 70%;
+  }
+  30% {
+    width: 10%;
+  }
+  32% {
+    transform: rotate(0deg)
+  }
+  35%{
+    transform: rotate(30deg);
+  }
+  100% {
+    width: 110%;
+    transform: rotate(30deg);
+  }
+}
+
+
+@keyframes rspan1 {
+  100% {
+    width: 100%;
+    transform: rotate(0deg);
+  }
+  70% {
+    width: 10%;
+    transform: rotate(-30deg);
+  }
+  72% {
+    transform: rotate(0deg);
+  }
+  75%{
+    transform: rotate(0deg);
+  }
+  0% {
+  width: 110%;
+  transform: rotate(-30deg);
+  }
+}
+@keyframes rspan2 {
+    100% {
+    width: 50%;
+    transform: translateX(0%);
+  }
+  70% {
+    width: 10%;
+  }
+
+  55%{
+    transform: translateX(0%);
+  }
+  0%{
+
+  
+  transform: translateX(-480%);
+  width: 10%;
+  }
+}
+@keyframes rspan3 {
+    100% {
+    width: 70%;
+    transform: rotate(0deg);
+  }
+  70% {
+    width: 10%;
+    transform: rotate(30deg);
+  }
+  72% {
+    transform: rotate(0deg)
+  }
+  75%{
+    transform: rotate(0deg);
+  }
+  0% {
+    width: 110%;
+    transform: rotate(30deg);
+  }
+}
